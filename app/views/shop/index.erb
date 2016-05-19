@@ -1,0 +1,7 @@
+<h1> Here are your Shops</h1>
+<%@shops.each do |shoppingcart| %>
+<li><%= shop.id %>: <%= shop.name %> - <%= shop.category %> 
+<a href ='/shop/<%= shop.id %>'>Click here to view</a> </li>
+<%end%>
+
+<a href = '/shop/new'> Click here to add a shop</a>

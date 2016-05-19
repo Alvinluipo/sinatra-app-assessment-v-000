@@ -4,7 +4,7 @@ class UserController < ApplicationController
     if !logged_in?
       erb :'user/new'
     else
-      redirect to '/shoppingcart'
+      redirect to '/shop'
     end
   end
 
@@ -14,13 +14,13 @@ class UserController < ApplicationController
     else
       @user = User.create(:username => params[:username], :password => params[:password])
       session[:user_id] = @user.id
-      redirect '/shoppingcart'
+      redirect '/shop'
     end
   end
 
   get '/login' do
     if logged_in?
-      redirect '/shoppingcart'
+      redirect '/shop'
     else
       erb :'user/login'
     end
@@ -30,7 +30,7 @@ class UserController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect "/shoppingcart"
+      redirect "/shop"
     else
       redirect to '/signup'
     end
