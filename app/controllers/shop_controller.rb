@@ -3,7 +3,7 @@ class ShopController < ApplicationController
   get '/shop' do
     redirect_if_not_logged_in
     @shop = Shop.all
-    erb :'shoppingcart/index'
+    erb :'shop/index'
   end
 
   get '/shop/new' do

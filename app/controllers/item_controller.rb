@@ -13,11 +13,8 @@ class ItemController < ApplicationController
 
   post "/item/new" do
     redirect_if_not_logged_in
-    @item = Item.new
-    @Item.name = params[:name]
-    @item.category = params[:category]
-    @item.user_id = session[:user_id]
-    @item.save
+    Item.create(params)
+    redirect "/shop"
     redirect "/item"
   end
 
