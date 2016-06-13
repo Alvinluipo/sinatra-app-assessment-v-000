@@ -1,10 +1,10 @@
 <h1>Edit Items <%=@item.id%></h1>
 
-<form action="/item/<%=@item.id %>" method="POST">
+<form action="/items/<%=@item.id %>" method="POST">
   <label> Item's name </label>
   <input type="text" name="name" value="<%=@item.name %>"> 
-  <label> Item's Category </label>
-  <input type="text" name="category" value="<%=@item.category %>"> 
+  <label> Item's Capacity </label>
+  <input type="text" name="capacity" value="<%=@item.capacity %>"> 
   <input type="submit" value="Update">
 
 </form>

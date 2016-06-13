@@ -1,0 +1,7 @@
+<h1> Here are your Items</h1>
+<%@items.each do |item| %>
+<li><%= item.id %>: <%= item.name %> - <%= item.capacity %> <a href ='/items/<%=item.id%>/edit'>Edit</a> <a href='/items/<%=item.id%>/delete'>Delete</a></li>
+<%end%>
+
+<a href = '/items/new'> Click here to add an item</a>
+<a href ="/logout"> Logout here </a>

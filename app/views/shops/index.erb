@@ -1,0 +1,9 @@
+<h1> Here are your Shops</h1>
+<%@shops.each do |shop| %>
+<li><%= shop.id %>: <%= shop.name %> - <%= shop.category %> 
+<a href ='/shops/<%= shop.id %>/edit'>Click here to Edit</a> </li>
+<%end%>
+
+<a href = '/shops/new'> Click here to add a shop</a>
+
+<a href ="/logout"> Logout here </a>

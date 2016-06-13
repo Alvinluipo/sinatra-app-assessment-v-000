@@ -1,8 +1,8 @@
 class CreateItems < ActiveRecord::Migration
   def change
-    create_table :Items do |t|
+    create_table :items do |t|
       t.string :name
-      t.string :category
+      t.integer :capacity
     end
   end
 end

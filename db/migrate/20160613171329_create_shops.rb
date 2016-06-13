@@ -3,7 +3,6 @@ class CreateShops < ActiveRecord::Migration
     create_table :shops do |t|
       t.string :name
       t.string :category
-      t.integer :user_id
     end
   end
 end

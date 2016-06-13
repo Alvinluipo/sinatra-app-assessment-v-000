@@ -5,7 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride
-use ItemController
-use ShopController
-use UserController
+use ItemsController
+use ShopsController
+use UsersController
 run ApplicationController
