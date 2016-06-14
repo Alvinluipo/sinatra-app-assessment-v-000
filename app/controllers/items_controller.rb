@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
     redirect "/items"
   end
 
-  post '/items/:id/delete' do
+  delete '/items/:id' do
       @item = Item.find_by_id(params[:id])
       @item.delete
       redirect "/items"
