@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
    get "/items" do
     redirect_if_not_logged_in
-    @items = Item.all
+    @items = current_user.items 
     erb :'items/index'
   end
 
@@ -41,7 +41,9 @@ class ItemsController < ApplicationController
     unless Item.valid_params?(params)
       redirect "/items/new?error=invalid item"
     end
-    Item.create(params)
+    @item = Item.create(params)
+    current_user.items << @item
+
     redirect "/items"
   end
 

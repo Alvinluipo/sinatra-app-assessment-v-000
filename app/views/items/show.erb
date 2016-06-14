@@ -1,11 +1,6 @@
 <h1><%= @item.id %>: <%= @item.name %> - <%= @item.capacity %></h1>
 
-<h2>Items</h2>
-<% @item.shops.each do |shop| %>
-    <li><a href="/shops/<%=shop.id%>"><%= shop.name %></a></li>
-  <% end%>
 
-  <a href="/items/<%=@item.id%>/edit">Edit</a>
 
 <form method="post" action="/items/<%=@item.id%>">
   <input id="hidden" type="hidden" name="_method" value="delete">

@@ -15,14 +15,8 @@ ActiveRecord::Schema.define(version: 20160613173203) do
 
   create_table "items", force: :cascade do |t|
     t.string  "name"
-    t.integer "capacity"
+    t.string  "capacity"
     t.integer "user_id"
-  end
-
-  create_table "shops", force: :cascade do |t|
-    t.string  "name"
-    t.string  "category"
-    t.integer "item_id"
   end
 
   create_table "users", force: :cascade do |t|
